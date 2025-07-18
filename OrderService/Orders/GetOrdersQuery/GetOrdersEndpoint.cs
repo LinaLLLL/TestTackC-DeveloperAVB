@@ -2,7 +2,7 @@
 namespace OrderService.Orders.GetOrderQuery
 {
     public record GetOrdersRequest(int? PageNumber = 1, int? PageSize = 5);
-    public record GetOrdersResponse(IEnumerable<Order> orders);
+    public record GetOrdersResponse(IEnumerable<Order> Orders);
     public class GetOrdersEndpoint : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
