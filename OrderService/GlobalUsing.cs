@@ -4,3 +4,4 @@ global using OrderService.Models;
 global using Marten;
 global using Carter;
 global using Mapster;
+global using Marten.Pagination;
