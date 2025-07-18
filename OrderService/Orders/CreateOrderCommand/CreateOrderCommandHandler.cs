@@ -1,10 +1,9 @@
 ﻿namespace OrderService.Orders.CreateOrderCommand
 {
-
     public record CreateOrderCommand(DateTime CreatedAt, List<OrderItem> Items, string Status) 
         : ICommand<CreateOrderResult>;
    
-    public record CreateOrderResult(Guid id);
+    public record CreateOrderResult(Guid Id);
 
     public class CreateOrderCommandHandler(IDocumentSession session)
         : ICommandHandler<CreateOrderCommand, CreateOrderResult>

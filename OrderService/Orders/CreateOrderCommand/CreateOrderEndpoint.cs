@@ -1,11 +1,7 @@
-﻿using Carter;
-using Mapster;
-
-
-namespace OrderService.Orders.CreateOrderCommand
+﻿namespace OrderService.Orders.CreateOrderCommand
 {
     public record CreateOrderRequest(DateTime CreatedAt, List<OrderItem> Items, string Status);
-    public record CreateOrderResponse(Guid id);
+    public record CreateOrderResponse(Guid Id);
     public class CreateOrderEndpoint : ICarterModule
     {
         public void AddRoutes(IEndpointRouteBuilder app)
