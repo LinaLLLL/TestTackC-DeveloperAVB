@@ -1,6 +1,12 @@
-﻿namespace OrderService.CQRS
+﻿using System.Windows.Input;
+
+namespace OrderService.CQRS
 {
-    public class ICommand
+    public interface ICommand : ICommand<Unit>
     {
+    }
+
+    public interface ICommand<out TResponse> : IRequest<TResponse> 
+    { 
     }
 }
