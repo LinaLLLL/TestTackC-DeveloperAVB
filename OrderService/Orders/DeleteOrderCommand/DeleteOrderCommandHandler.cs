@@ -11,7 +11,7 @@
             var order = await session.LoadAsync<Order>(command.Id, cancellationToken);
             if (order == null)
             {
-                throw new Exception();
+                throw new InvalidOperationException($"Order with ID {command.Id} not found."); ;
             }
 
             session.Delete(order);

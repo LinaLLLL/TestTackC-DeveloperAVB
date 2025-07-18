@@ -1,5 +1,4 @@
-﻿
-namespace OrderService.Orders.DeleteOrderCommand
+﻿namespace OrderService.Orders.DeleteOrderCommand
 {
     public record DeleteOrderRequest(Guid Id);
     public record DeleteOrderResponse(bool IsSuccess);
