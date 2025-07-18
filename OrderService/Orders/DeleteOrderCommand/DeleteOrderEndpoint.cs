@@ -13,7 +13,10 @@ namespace OrderService.Orders.DeleteOrderCommand
                 var result = await sender.Send(command);
                 var response = new DeleteOrderResponse(result.IsSuccess);
                 return Results.Ok(response);
-            });
+            })
+            .WithName("DeleteOrder")
+            .WithSummary("Удаление заказа")
+            .WithDescription("Удаляет заказ по переданному идентификатору");
         }
     }
 }
